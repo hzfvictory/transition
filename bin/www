@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+require("@babel/register")({
+  presets: [["@babel/preset-env"]],
+  plugins: [
+    ["@babel/plugin-transform-runtime", { corejs: 3 }],
+    "@babel/plugin-proposal-throw-expressions",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-nullish-coalescing-operator"
+  ]
+});
+
+require("../src/server");
